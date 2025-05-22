@@ -50,7 +50,7 @@ jobs:
 
   production:
       runs-on: ubuntu-latest
-      if: github.event.inputs.environment == 'Production'
+      if: github.event.inputs.environments == 'Production'
       needs: [test, load-test]
       environment: 
         url: https://writeabout.net
